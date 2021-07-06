@@ -1,3 +1,2 @@
 export const GET_COUNTRIES = "GET_COUNTRIES"
-
-
+export const UPDATE_COUNTRY = "UPDATE_COUNTRY"
