@@ -1,9 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.post("/country", (req, res, next) => {
+  return res.send({ success: true, message: "create new country" });
+});
+
+router.get("/country", (req, res, next) => {
+  return res.send({ success: true, message: "list all countries" });
+});
+
+router.put("/country/:id", (req, res, next) => {
+  return res.send({ success: true, message: "update one country" });
+});
+
+router.delete("/country/:id", (req, res, next) => {
+  return res.send({ success: true, message: "delete one country" });
 });
 
 module.exports = router;
