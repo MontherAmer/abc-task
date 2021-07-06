@@ -8,6 +8,10 @@ import { Provider } from "react-redux"
 
 import store from "./store"
 
+import {preStartApisFunction} from './store/axiospre'
+
+preStartApisFunction()
+
 const app = (
   <Provider store={store}>
     <BrowserRouter>
