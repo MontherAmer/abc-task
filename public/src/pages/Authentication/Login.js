@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import MetaTags from "react-meta-tags"
 import React from "react"
-
+import {useHistory} from 'react-router-dom'
 import { Row, Col, CardBody, Card, Alert, Container } from "reactstrap"
 
 //redux
@@ -29,6 +29,8 @@ import { facebook, google } from "../../config"
 
 const Login = props => {
   const dispatch = useDispatch()
+
+  const history=useHistory()
 
   const { error } = useSelector(state => ({
     error: state.Login.error,
@@ -71,6 +73,9 @@ const Login = props => {
   const facebookResponse = response => {
     signIn(response, "facebook")
   }
+
+  return history.push('/dashboard')
+  
 
   return (
     <React.Fragment>
