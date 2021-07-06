@@ -26,6 +26,10 @@ import "./assets/scss/theme.scss"
 // Activating fake backend
 // fakeBackend()
 
+import {preStartApisFunction} from './store/axiospre'
+
+preStartApisFunction()
+
 // const firebaseConfig = {
 //   apiKey: process.env.REACT_APP_APIKEY,
 //   authDomain: process.env.REACT_APP_AUTHDOMAIN,

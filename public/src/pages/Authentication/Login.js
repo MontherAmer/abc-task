@@ -74,7 +74,7 @@ const Login = props => {
     signIn(response, "facebook")
   }
 
-  return history.push('/dashboard')
+  return history.push('/country')
   
 
   return (

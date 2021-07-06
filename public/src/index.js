@@ -8,9 +8,9 @@ import { Provider } from "react-redux"
 
 import store from "./store"
 
-import {preStartApisFunction} from './store/axiospre'
+// import {preStartApisFunction} from './store/axiospre'
 
-preStartApisFunction()
+// preStartApisFunction()
 
 const app = (
   <Provider store={store}>
