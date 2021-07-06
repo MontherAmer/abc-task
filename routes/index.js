@@ -1,20 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
-router.post("/country", (req, res, next) => {
-  return res.send({ success: true, message: "create new country" });
-});
+const { countryControllers } = require("../app/controllers");
+const { upload } = require("../app/utils");
 
-router.get("/country", (req, res, next) => {
-  return res.send({ success: true, message: "list all countries" });
-});
+router.post("/country", upload.single("image"), countryControllers.store);
 
-router.put("/country/:id", (req, res, next) => {
-  return res.send({ success: true, message: "update one country" });
-});
+router.get("/country", countryControllers.list);
 
-router.delete("/country/:id", (req, res, next) => {
-  return res.send({ success: true, message: "delete one country" });
-});
+router.delete("/country/:id", countryControllers.delete);
+
+router.put("/country/:id", upload.single("image"), countryControllers.update);
 
 module.exports = router;
