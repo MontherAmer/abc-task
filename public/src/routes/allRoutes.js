@@ -173,7 +173,7 @@ import ContactsProfile from "../pages/Contacts/ContactsProfile/contacts-profile"
 import Country from '../pages/Country'
 
 const userRoutes = [
-  { path: "/test", component: Country },
+  { path: "/country", component: Country },
 
   { path: "/dashboard", component: Dashboard },
   { path: "/dashboard-saas", component: DashboardSaas },
