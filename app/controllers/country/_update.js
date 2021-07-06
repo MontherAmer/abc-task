@@ -16,6 +16,7 @@ exports.update = async (req, res) => {
       });
 
     if (image) countryObject.image = image;
+    countryObject.active = req.body.active;
 
     for (let key in req.body)
       allowedFields.includes(key) ? (countryObject[key] = req.body[key]) : null;
@@ -26,7 +27,7 @@ exports.update = async (req, res) => {
 
     return res.send({ success: true, status: 200, data });
   } catch (err) {
-    console.log(err)
+    console.log(err);
     return res.send({
       success: false,
       status: 500,
