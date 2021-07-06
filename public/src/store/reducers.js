@@ -42,6 +42,8 @@ import Dashboard from "./dashboard/reducer";
 //Dasboard saas
 import DashboardSaas from "./dashboard-saas/reducer";
 
+import countries from './country/reducer'
+
 const rootReducer = combineReducers({
   // public
   Layout,
@@ -59,7 +61,8 @@ const rootReducer = combineReducers({
   tasks,
   contacts,
   Dashboard,
-  DashboardSaas
+  DashboardSaas,
+  countries
 })
 
 export default rootReducer
