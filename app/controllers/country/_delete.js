@@ -4,7 +4,7 @@ exports.delete = async (req, res) => {
   try {
     await Country.deleteOne({ _id: req.params.id });
 
-    return res.send({ success: true, status: 200 });
+    return res.send({ success: true, status: 200, data: req.params.id });
   } catch (err) {
     return res.send({
       success: false,

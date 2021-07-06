@@ -2,7 +2,7 @@ import React from "react"
 
 import { Button } from "reactstrap"
 
-const DisplayRow = ({ index, item, handleEdit, handleState, handleDelete }) => {
+const DisplayRow = ({ index, item, handleEdit, handleStatus, handleDelete }) => {
   return (
     <tr>
       <th scope="row">{index}</th>
@@ -34,7 +34,7 @@ const DisplayRow = ({ index, item, handleEdit, handleState, handleDelete }) => {
           <Button
             color="danger"
             className="btn btn-danger"
-            onClick={() => handleState(item)}
+            onClick={() => handleStatus(item)}
             style={{ width: "97px" }}
           >
             Deactivate
@@ -43,7 +43,7 @@ const DisplayRow = ({ index, item, handleEdit, handleState, handleDelete }) => {
           <Button
             color="primary"
             className="btn btn-primary"
-            onClick={() => handleState(item)}
+            onClick={() => handleStatus(item)}
             style={{ width: "97px" }}
           >
             Activate
@@ -54,7 +54,7 @@ const DisplayRow = ({ index, item, handleEdit, handleState, handleDelete }) => {
         <Button
           color="danger"
           className="btn btn-danger"
-          onClick={handleDelete}
+          onClick={()=>handleDelete(item._id)}
         >
           Delete
         </Button>
